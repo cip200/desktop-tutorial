@@ -14,9 +14,10 @@ body {
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  flex: 1;
+    display: grid;
+    grid-template-columns: 15% 70% 15%; 
+    flex: 1;
+}
 
   .side-left,
   .side-right {
@@ -66,19 +67,22 @@ body {
 
   @media (max-width: 768px) {
     .grid-container {
-      grid-template-columns: 60px 1fr 100px;
-      gap: 5px;
+        grid-template-columns: 50px 1fr 80px; 
+        gap: 2px; /* Reducem spațiul dintre coloane pe mobil */
     }
 
-    .side-left {
-      display: block;
-      padding: 5px;
+    .side-left, .side-right {
+        padding: 5px; 
+        font-size: 11px;
     }
 
     .side-left button {
-      width: 100%;
-      font-size: 12px;
-      padding: 5px 2px;
+        width: 100%;
+        padding: 5px 0;
+        font-size: 10px;
     }
-  }
+
+    .content-center {
+        padding: 10px 5px;
+    }
 }
